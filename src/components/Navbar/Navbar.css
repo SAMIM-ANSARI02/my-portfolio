@@ -1,0 +1,41 @@
+.n-wrapper{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+.n-left{
+    display: flex;
+    align-items: center;
+    flex:1;
+    gap: 2rem;
+}
+.n-right{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    font-weight: 400;
+
+}
+.n-list{
+    flex: 10;
+
+}
+.n-list>ul{
+    display: flex;
+    gap:2rem;
+    margin-right:4rem;
+}
+.n-name{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.n-list>ul>li:hover{
+    color: var(--orange);
+    cursor: pointer;
+}
+.n-button{
+    flex:2;
+    
+}
