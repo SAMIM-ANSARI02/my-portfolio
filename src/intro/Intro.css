@@ -58,3 +58,14 @@
 .i-icon>*{
     transform: scale(0.6);
 }
+.blur{
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    background-color: #edd0ff;
+    filter:blur(72px);
+    z-index:-9;
+    top:-15%;
+    left: 50%;
+  }
