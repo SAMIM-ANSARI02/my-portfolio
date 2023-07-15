@@ -20,8 +20,12 @@
     color: var(--grey);
     font-size: 16px;
 }
-c-button{
-    background: rgb(151, 22, 22);
+.c-button{
+    background:#ffffff;
     box-shadow: 0px 19px 60px rgba(0 0 0 0.08);
     border-radius: 7px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    color: rgb(79, 122, 224);
 }
