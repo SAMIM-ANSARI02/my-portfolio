@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Navbar } from './components/Navbar/Navbar'
 import './App.css'
 import Intro from './intro/Intro'
@@ -8,11 +8,21 @@ import Work from './components/works/Work'
 import Portfolio from './components/Portfolio/Portfolio'
 import Testimonial from './components/Testimonial/Testimonial'
 import Contact from './components/Contact/Contact'
+import Footer from './components/Footer/Footer'
+import { themeContext } from './Context'
+
 
 
 const App = () => {
+
+  const theme=useContext(themeContext)
+  const darkMode=theme.state.darkMode;
   return (
-  <div className="App">
+  <div className="App"
+  style={{
+    background: darkMode? 'black':'',
+    color: darkMode?'white':''
+  }}>
     <Navbar/>
     <Intro/>
     <Services/>
@@ -21,6 +31,7 @@ const App = () => {
     <Portfolio/>
     <Testimonial/>
     <Contact/>
+    <Footer/>
   </div>
   )
 }
