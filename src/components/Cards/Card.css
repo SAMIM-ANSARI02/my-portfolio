@@ -29,3 +29,12 @@
     font-size: 16px;
     color: rgb(79, 122, 224);
 }
+
+/* responsive for mobile  */
+@media screen and (max-width:480px){
+    .cards{
+        width:auto;
+        margin-right:100px;
+
+    }
+}

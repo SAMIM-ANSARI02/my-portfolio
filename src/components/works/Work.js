@@ -5,19 +5,19 @@ import flipkart from '../image/flipkart.png'
 import microsoft from'../image/microsoft-logo.png'
 import oracle from '../image/oracle.png'
 import dell from '../image/dell.png'
-
-
-
-
-
-
+import { themeContext } from '../../Context'
+import { useContext } from 'react'
+import {motion} from 'framer-motion'
+import { duration } from '@mui/material'
 const Work = () => {
+  const theme=useContext(themeContext)
+  const darkMode=theme.state.darkMode;
   return (
   
     <div className="work">
         {/* left side */}
           <div className="awesome">
-              <span>Work for all these</span>
+              <span style={{color: darkMode?'white':''}}>Dream to Work for all these</span>
               <span>Brand companies</span>
               <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                    <br/>
@@ -29,8 +29,14 @@ const Work = () => {
   
           </div>
           {/* right side */}
-          <div className="w-right">
-             <div className="w-mainCircle">
+          <motion.div className="w-right">
+             <motion.div 
+               transition={{duration:3.5,type:'spring'}}
+               initial={{rotate:45}}
+               whileInView={{rotate:0}}
+               viewport={{margin:'-40px'}}
+             
+             className="w-mainCircle">
                 <div className="w-secCircle">
                     <img src={flipkart} alt="" />
                 </div>
@@ -46,11 +52,11 @@ const Work = () => {
                 <div className="w-secCircle">
                     <img src={amazon} alt="" />
                 </div>
-             </div>
+             </motion.div>
              <div className="w-backcircle blue" ></div>
              <div className="w-backcircle yellow"></div>
 
-          </div>
+          </motion.div>
     </div>
   )
 }

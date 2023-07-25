@@ -26,6 +26,8 @@
     display: flex;
     gap:2rem;
     margin-right:4rem;
+    cursor: pointer;
+    list-style: none;
 }
 .n-name{
     font-size: 1.3rem;
@@ -38,4 +40,14 @@
 .n-button{
     flex:2;
     
+}
+
+/* responsive for mobile view */
+@media screen and (max-width:480px){
+    .n-list{
+        display: none;
+    }
+   .n-button{
+    display: none;
+   }
 }
